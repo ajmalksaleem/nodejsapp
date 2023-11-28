@@ -1,0 +1,34 @@
+<%- include('partials/header'); -%>
+
+
+
+<div id="app">
+   <!--<button id="toggle-mode">Toggle Night Mode</button>--> 
+   <i id="toggle-mode" class="fa-solid fa-moon fa-2x mx-2 py-2" role="button"></i>
+ 
+
+    <div class="jumbotron centered ">
+        <div class="container ">
+            <i class="fa-solid fa-key fa-shake fa-6x"></i>
+            <h1 class="display-3">Secrets</h1>
+            <p class="lead">Dont keep your secrets,share them anonymously!</p>
+            <hr>
+            <a class="btn btn-secondary btn-lg" href="/register" role="button">Register</a>
+            <a class="btn btn-dark btn-lg" href="/login" role="button"> Login </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const toggleButton = document.getElementById('toggle-mode');
+const appElement = document.getElementById('app');
+
+toggleButton.addEventListener('click', () => {
+  appElement.classList.toggle('night-mode');
+});
+
+</script>
+
+
+
+    <%- include('partials/footer'); -%>
